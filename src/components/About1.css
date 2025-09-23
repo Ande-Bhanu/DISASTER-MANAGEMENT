@@ -1,0 +1,107 @@
+/* Ensure the body and html have no default margin or padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white; /* Default text color for the entire page */
+}
+
+/* Main container for the About page, similar to home-container */
+.about-container {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; /* Prevents scrollbars if content is larger than viewport */
+}
+
+/* A subtle overlay to make the text more readable */
+.about-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  z-index: 1; /* Place overlay below header but above background image */
+}
+
+/* Header Styling - Reusing styles from Home1.css for consistency */
+.header {
+  position: relative;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  padding: 10px 40px;
+  box-sizing: border-box;
+  z-index: 10; /* Ensures it sits on top of other content and overlay */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.logo h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0; /* Remove default margin */
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: text-decoration 0.3s;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Main content area for the About text */
+.main-content {
+  position: relative;
+  z-index: 2; /* Ensures content is above the overlay */
+  max-width: 900px; /* Wider than hero-content for the longer text */
+  padding: 40px; /* Increased padding */
+  margin-top: 80px; /* Pushes content down from header */
+  text-align: center;
+  /* Add a subtle background to the text area if needed, like rgba(0,0,0,0.3) */
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  /* border-radius: 10px; */
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.7; /* Slightly more line height for readability */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Adds shadow for readability */
+}
