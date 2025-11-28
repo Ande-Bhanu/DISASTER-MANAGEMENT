@@ -1,0 +1,62 @@
+.dashboard-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Center the box */
+.report-box {
+  width: 70%;
+  max-width: 900px;
+  border: 2px solid black;
+  padding: 30px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  backdrop-filter: blur(3px);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Align inputs and labels vertically */
+.report-box label {
+  margin-right: 10px;
+  color: white;
+  font-weight: 600;
+}
+
+.report-box input {
+  margin-right: 20px;
+  padding: 4px 8px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+/* button style */
+.report-box button {
+  padding: 6px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* reports count */
+.report-count {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 22px;
+  color: white;
+}
+
+.count-box {
+  width: 100px;
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+}

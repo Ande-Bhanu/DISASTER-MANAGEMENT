@@ -6,6 +6,7 @@ import About1 from "./components/About1";
 import SignIn from "./components/SignIn";
 import Login from "./components/Login";
 import Home1 from "./components/Home1";
+import Dashboard from "./components/Dashboard";   // <-- Add this
 
 const AppRouter = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(
@@ -21,6 +22,7 @@ const AppRouter = () => {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/home1" element={<Home1 isLoggedIn={isLoggedIn} />} />
+        <Route path="/dashboard" element={<Dashboard isLoggedIn={isLoggedIn} />} />   {/* NEW */}
       </Routes>
     </Router>
   );

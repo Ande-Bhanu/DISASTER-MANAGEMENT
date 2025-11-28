@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Home1.css";
 
-const Home1 = ({ isLoggedIn }) => { // Receive login state
+const Home1 = ({ isLoggedIn }) => {
   const homeLink = isLoggedIn ? "/home1" : "/";
   const aboutLink = isLoggedIn ? "/about1" : "/about";
 
@@ -16,13 +16,9 @@ const Home1 = ({ isLoggedIn }) => { // Receive login state
           </div>
 
           <ul className="nav-links">
-            <li><Link to={homeLink}>Home</Link></li> {/* Dynamic Home link */}
-            <li><Link to={aboutLink}>About</Link></li> {/* Dynamic About link */}
-            <li><Link to="/donation">Donation</Link></li>
-            <li><Link to="/report">Report</Link></li>
-            <li><Link to="/volunteers">Volunteers</Link></li>
-            <li><Link to="/contacts">Contact</Link></li>
-            <li><Link to="/profile">Profile</Link></li>
+            <li><Link to={homeLink}>Home</Link></li>
+            <li><Link to={aboutLink}>About</Link></li>
+            <li><Link to="/dashboard">Dashboard</Link></li> {/* Added dashboard */}
           </ul>
         </nav>
       </div>
